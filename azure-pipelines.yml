@@ -8,6 +8,9 @@ trigger: none
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  RG: 'RG-Bicep-DevOps-Demo'
+
 jobs:
   - job: Deploy
     steps:
@@ -18,9 +21,19 @@ jobs:
           azureResourceManagerConnection: 'ASHubServiceConnection'
           subscriptionId: '39aca73e-1d25-4edf-84d5-ebe0397a816b'
           action: 'Create Or Update Resource Group'
-          resourceGroupName: 'RG-Bicep-DevOps-Demo'
+          resourceGroupName: $(RG)
           location: 'Australia East'
           templateLocation: 'Linked artifact'
           csmFile: 'main.bicep'
           csmParametersFile: 'main.parameters.json'
-          deploymentMode: 'Validation'
+          deploymentMode: Incremental
+  - job: CleanUp
+    dependsOn: Deploy
+    steps:
+      - task: AzureCLI@2
+        displayName: 'Cleanup Resources'
+        inputs:
+          azureSubscription: 'ASHubServiceConnection'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: 'az group delete --name $(RG) --yes'
