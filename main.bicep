@@ -30,7 +30,7 @@ module vnet './vnet/vnet.bicep' = {
   }
 }
 
-module bastion './bastion/bastionhost.bicep' = {
+/*module bastion './bastion/bastionhost.bicep' = {
   name: 'bastionDeploy'
   params: {
     bastionPubIpName: bastionPubIpName
@@ -40,3 +40,4 @@ module bastion './bastion/bastionhost.bicep' = {
     vnetId: vnet.outputs.vnetId
   }
 }
+*/
