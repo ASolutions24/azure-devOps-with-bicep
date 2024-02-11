@@ -28,3 +28,13 @@ jobs:
           csmParametersFile: 'main.parameters.json'
           deploymentMode: Incremental
 
+  - job: CleanUp
+    dependsOn: Deploy
+    steps:
+      - task: AzureCLI@2
+        displayName: 'Cleanup Resources'
+        inputs:
+          azureSubscription: 'ASHubServiceConnection'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: 'az group delete --name $(RG) --yes'
