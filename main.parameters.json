@@ -5,7 +5,8 @@
     "tags": {
       "value": {
         "Environment": "Lab",
-        "Department": "IT"
+        "Department": "IT",
+        "NewTag": "Test"
       }
     },
     "vnetName": {
@@ -22,6 +23,10 @@
         {
           "subnetPrefix": "10.10.0.0/24",
           "name": "Subnet1"
+        },
+        {
+          "subnetPrefix": "10.10.1.0/24",
+          "name": "Subnet2"
         },
         {
           "subnetPrefix": "10.10.250.0/24",
