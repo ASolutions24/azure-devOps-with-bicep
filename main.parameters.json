@@ -24,14 +24,6 @@
           "name": "Subnet1"
         },
         {
-          "subnetPrefix": "10.10.1.0/24",
-          "name": "Subnet2"
-        },
-        {
-          "subnetPrefix": "10.10.2.0/24",
-          "name": "Subnet3"
-        },
-        {
           "subnetPrefix": "10.10.250.0/24",
           "name": "AzureBastionSubnet"
         }
