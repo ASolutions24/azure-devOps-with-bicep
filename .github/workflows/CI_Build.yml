@@ -9,6 +9,7 @@ env:
   AZURE_ARTIFACTS_FEED_URL: https://pkgs.dev.azure.com/altronsolution/Production/_packaging/AzureDevOpsWithBicepProd/nuget/v3/index.json
   BUILD_CONFIGURATION: 'Release'    # set this to the appropriate build configuration
   DOTNET_VERSION: '3.1.x' 
+  VERSION_MAJOR_MINOR_PATCH: '1.0.0' #The major.minor.patch part of Semantic version 2 (major.minor.patch.revision)
   PROJECT_FILE_RELATIVE_PATH: './AzureDevOpsWithBicep.csproj'
   NUGET_OUTPUT_FOLDER_RELATIVE_PATH: './bin/packed'
   TAG_PREFIX: 'v'
