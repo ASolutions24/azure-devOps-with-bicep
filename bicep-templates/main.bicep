@@ -19,7 +19,7 @@ param bastionName string
 
 
 // Run
-module vnet './vnet/vnet.bicep' = {
+module vnet '../../a/git-modules/content/modules/vnet/vnet.bicep' = {
   name: 'vnetDeploy'
   params: {
     location: location
@@ -30,7 +30,7 @@ module vnet './vnet/vnet.bicep' = {
   }
 }
 
-/*module bastion './bastion/bastionhost.bicep' = {
+/*module bastion '../../a/git-modules/content/modules/bastion/bastionhost.bicep' = {
   name: 'bastionDeploy'
   params: {
     bastionPubIpName: bastionPubIpName
