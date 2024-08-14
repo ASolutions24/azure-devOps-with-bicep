@@ -2,15 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>AzureDevOpsWithBicep</PackageId>
+    <PackageId>azure-devOps-with-bicep</PackageId>
     <Authors>wrap</Authors>
     <Company>CFS</Company>
-    <Product>AzureDevOpsWithBicep</Product>
+    <Product>azure-devOps-with-bicep</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="bastian\**\*" CopyToPublishDirectory="Always" />
-    <Content Include="vnet\**\*" CopyToPublishDirectory="Always" />
+    <Content Include="bicep-templates\**\*" CopyToPublishDirectory="Always" />
+    <Content Include="terraform-templates\**\*" CopyToPublishDirectory="Always"/>
+    <Content Include="scripts\**\*" CopyToPublishDirectory="Always" />
   </ItemGroup>
 </Project>
