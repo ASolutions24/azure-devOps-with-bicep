@@ -10,8 +10,8 @@ pool:
 
 variables:
   RG: 'RG-Bicep-DevOps-Demo'
-  templateFile: 'main.bicep'
-  templateParameterFile: 'main.parameters.json'
+  templateFile: './bicep-templates/main.bicep'
+  templateParameterFile: './bicep-templates/main.parameters.json'
 
 stages:  
 
