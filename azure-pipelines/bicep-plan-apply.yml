@@ -22,14 +22,6 @@ stages:
           steps:
           - checkout: self
           - task: DownloadPackage@1
-            #condition: and(succeeded(), ne('${{ environment.appVersionToDeploy }}', 'deploy-feature-branch-code'), ne('${{ environment.appVersionToDeploy }}', 'hotfix'))
-            inputs:
-              packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
-              feed: 'azure-devOps-with-bicep'
-              definition: 'azure-devOps-with-bicep'
-              version: '1.0.0.27'
-              downloadPath: '$(System.ArtifactsDirectory)'
-          - task: DownloadPackage@1
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
               feed: 'as-bicep-core-modules'
