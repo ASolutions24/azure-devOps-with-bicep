@@ -57,7 +57,7 @@ stages:
     displayName: Bicep_Apply_AzDevOpsEnv
     environment: as_dev
     pool:
-      vmImage: ubuntu-latest
+      vmImage: windows-latest
     #variables:
     #- group: ${{ environment.variableGroupName }}
     strategy:
@@ -93,7 +93,7 @@ stages:
             #condition: and(succeeded(), or(eq('${{ environment.appVersionToDeploy }}', 'deploy-feature-branch-code'), eq('${{ environment.appVersionToDeploy }}', 'hotfix')))
             displayName: Bicep-Deployment-Apply-FeatureBranch
             inputs:
-              azureSubscription: ${{ environment.service_connection_name }}
+              azureSubscription: 'ASProdServiceConnection'
               scriptType: filePath
               scriptPath: $(Build.SourcesDirectory)\scripts\Bicep-Deployment-Apply.ps1
               azurePowerShellVersion: latestVersion
