@@ -25,14 +25,14 @@ stages:
             #condition: and(succeeded(), ne('${{ environment.appVersionToDeploy }}', 'deploy-feature-branch-code'), ne('${{ environment.appVersionToDeploy }}', 'hotfix'))
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
-              feed: 'azure-devOps-with-bicep'
+              feed: 'Production/azure-devOps-with-bicep'
               definition: 'Azure.DevOps.With.Bicep'
               version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)'
           - task: DownloadPackage@1
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
-              feed: 'as-bicep-core-modules'
+              feed: 'Production/as-bicep-core-modules'
               definition: 'AS.Bicep-Core-Modules'
               version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)/git-modules'
@@ -69,14 +69,14 @@ stages:
             #condition: and(succeeded(), ne('${{ environment.appVersionToDeploy }}', 'deploy-feature-branch-code'), ne('${{ environment.appVersionToDeploy }}', 'hotfix'))
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
-              feed: 'azure-devOps-with-bicep'
-              definition: 'azure-devOps-with-bicep'
+              feed: 'Production/azure-devOps-with-bicep'
+              definition: 'Azure.DevOps.With.Bicep'
               version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)'
           - task: DownloadPackage@1
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
-              feed: 'as-bicep-core-modules'
+              feed: 'Production/as-bicep-core-modules'
               definition: 'AS.Bicep-Core-Modules'
               version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)/git-modules'
