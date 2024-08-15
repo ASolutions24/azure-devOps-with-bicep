@@ -27,14 +27,14 @@ stages:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
               feed: 'azure-devOps-with-bicep'
               definition: 'azure-devOps-with-bicep'
-              version: latest
+              version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)'
           - task: DownloadPackage@1
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
               feed: 'as-bicep-core-modules'
               definition: 'AS.Bicep-Core-Modules'
-              version: latest
+              version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)/git-modules'
           - task: AzurePowerShell@5
             #condition: and(succeeded(), ne('${{ environment.appVersionToDeploy }}', 'deploy-feature-branch-code'), ne('${{ environment.appVersionToDeploy }}', 'hotfix'))
@@ -71,14 +71,14 @@ stages:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
               feed: 'azure-devOps-with-bicep'
               definition: 'azure-devOps-with-bicep'
-              version: latest
+              version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)'
           - task: DownloadPackage@1
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
               feed: 'as-bicep-core-modules'
               definition: 'AS.Bicep-Core-Modules'
-              version: latest
+              version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)/git-modules'
           - task: AzurePowerShell@5
             #condition: and(succeeded(), ne('${{ environment.appVersionToDeploy }}', 'deploy-feature-branch-code'), ne('${{ environment.appVersionToDeploy }}', 'hotfix'))
