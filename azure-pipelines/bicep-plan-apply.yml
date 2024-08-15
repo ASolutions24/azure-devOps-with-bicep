@@ -32,7 +32,7 @@ stages:
           - task: DownloadPackage@1
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
-              feed: 'Production/as-bicep-core-modules'
+              feed: 'Production/as-bicep-core-module'
               definition: 'AS.Bicep-Core-Modules'
               version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)/git-modules'
@@ -76,7 +76,7 @@ stages:
           - task: DownloadPackage@1
             inputs:
               packageType: 'nuget' # 'nuget' Options: maven, npm, nuget, pypi, upack
-              feed: 'Production/as-bicep-core-modules'
+              feed: 'Production/as-bicep-core-module'
               definition: 'AS.Bicep-Core-Modules'
               version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)/git-modules'
