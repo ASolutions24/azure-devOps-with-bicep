@@ -37,6 +37,14 @@ stages:
               version: 'latest'
               downloadPath: '$(System.ArtifactsDirectory)/git-modules'
           - task: AzurePowerShell@5
+            displayName: Directory Structure
+            inputs:
+              azureSubscription: 'ASProdServiceConnection'
+              ScriptType: 'InlineScript'
+              Inline: 'Get-ChildItem $(System.ArtifactsDirectory) -Recurse'
+              azurePowerShellVersion: 'latestVersion'
+              workingDirectory: '$(Agent.BuildDirectory)'
+          - task: AzurePowerShell@5
             #condition: and(succeeded(), ne('${{ environment.appVersionToDeploy }}', 'deploy-feature-branch-code'), ne('${{ environment.appVersionToDeploy }}', 'hotfix'))
             displayName: Bicep-Deployment-Plan-VersionedCode
             inputs:
