@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\AzureDevOpsWithBicep.csproj",
-      "projectName": "azure-devOps-with-bicep",
-      "projectPath": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\AzureDevOpsWithBicep.csproj",
+      "projectUniqueName": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\azure-devOps-with-bicep\\AzureDevOpsWithBicep.csproj",
+      "projectName": "Azure.DevOps.With.Bicep",
+      "projectPath": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\azure-devOps-with-bicep\\AzureDevOpsWithBicep.csproj",
       "packagesPath": "C:\\Users\\Kayam\\.nuget\\packages\\",
-      "outputPath": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\obj\\",
+      "outputPath": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\azure-devOps-with-bicep\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kayam\\AppData\\Roaming\\NuGet\\NuGet.Config",

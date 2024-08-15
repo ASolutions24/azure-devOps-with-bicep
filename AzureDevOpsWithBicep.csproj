@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>azure-devOps-with-bicep</PackageId>
+    <PackageId>Azure.DevOps.With.Bicep</PackageId>
     <Authors>wrap</Authors>
     <Company>CFS</Company>
-    <Product>azure-devOps-with-bicep</Product>
+    <Product>Azure.DevOps.With.Bicep</Product>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 

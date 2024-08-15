@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sdv9AGbMEbrEkM4yXrHUAOOKYVsGv16A56ZjV0WCEwYUCE8ruzXAS1tPenLMNhzIgjkmJ+T1na0v0gSCTk/FrA==",
+  "dgSpecHash": "Pfut3lR2nhkV9etyXOXAw9qxBFSCoWQ1h9VO4HuBDhxrHfqdzHK3javvErmyHJu9673XKuvkgmj9iF20/5EoYg==",
   "success": true,
-  "projectFilePath": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\AzureDevOpsWithBicep.csproj",
+  "projectFilePath": "C:\\TerraformProject\\Git\\AS-GitHub-Repository\\azure-devOps-with-bicep\\azure-devOps-with-bicep\\AzureDevOpsWithBicep.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
