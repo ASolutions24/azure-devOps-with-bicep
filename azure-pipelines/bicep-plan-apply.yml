@@ -13,7 +13,8 @@ stages:
     displayName: Bicep_Plan_AzDevOpsEnv
     environment: 'as_dev'
     pool:
-      vmImage: windows-latest
+      #vmImage: windows-latest
+      name: default
     #variables:
     #- group: ${{ environment.variableGroupName }}
     strategy:
