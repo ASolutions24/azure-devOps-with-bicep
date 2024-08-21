@@ -4,5 +4,5 @@ $TemplateParameterFile = "$env:System_ArtifactsDirectory"+ "/content/bicep-templ
 $TemplateFile = "$env:System_ArtifactsDirectory"+ "/content/bicep-templates/main.bicep"
 
 $ResourceGroupName = "RG-Bicep-DevOps-Demo"
-
+Get-AzResourceGroup | Format-Table
 New-AzResourceGroupDeployment -TemplateFile $TemplateFile -TemplateParameterFile $TemplateParameterFile -ResourceGroupName $ResourceGroupName -Whatif
