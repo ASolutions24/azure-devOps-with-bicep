@@ -14,7 +14,8 @@ stages:
     environment: 'as_dev'
     pool:
       #vmImage: windows-latest
-      name: AS-Windows
+      #name: AS-Windows
+      name: default
     #variables:
     #- group: ${{ environment.variableGroupName }}
     strategy:
